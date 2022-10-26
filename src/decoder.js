@@ -1,5 +1,5 @@
 // IoT-Anywhere Coopster - Chicken Coop Monitor
-// Example payload: 6300f4279b01de019e0100
+// Example payload: 6400f9272e0292019102004B
 
 function Decoder(payload, port) {
         var decoded = [
