@@ -63,6 +63,8 @@ struct coop_data_s
     uint8_t ai_count_1 = 0;		//9
     uint8_t ai_status_1 = 0;	//10
 	uint8_t ai_conf_avg_1 = 0;	//11
+	uint8_t iaq_index_1 = 0;    //12
+	uint8_t iaq_index_2 = 0;    //13
 };
 extern coop_data_s g_coop_data;
 #define COOP_DATA_LEN sizeof(g_coop_data)

@@ -34,6 +34,10 @@ function Decoder(payload, port) {
             {
                 field: "AI_AVG_CONFIDENCE",
                 value: payload[11]
+            },
+            {
+                field: "IAQ_INDEX",
+                value: ((payload[12] << 8) | payload[13])
             }
         ];
         
