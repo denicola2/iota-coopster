@@ -11,3 +11,17 @@ Here is the list of hardware used, substitutions can be made based on use-case
 
 ## Vision AI Dataset
 A public dataset from [Roboflow Universe](https://universe.roboflow.com/) was loaded onto the Grove Vision AI module via the instructions provided [HERE](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-Grove-Vision-AI/#jump1)
+
+## Sample Serial Output
+```
+[APP] Timer wakeup
+[BME] RH= 52.00 T= 24.40
+[BME] P= 101270 R= 9150
+[AI] Time consuming: 710
+[AI] Number of chickens: 1
+[AI] result:detected
+[AI] Detecting and calculating: 1
+[AI] confidence: 53
+[APP] Packet enqueued
+[APP] LPWAN TX cycle finished ACK
+```
