@@ -43,7 +43,7 @@ bool init_bme680(void)
 void bme680_get()
 {
     String output;
-    output = "Timestamp [ms], raw temperature [C], pressure [hPa], raw relative humidity [%], gas [Ohm], IAQ, IAQ accuracy, temperature [°C], relative humidity [%], Static IAQ, CO2 equivalent, breath VOC equivalent";
+    output = "Timestamp [ms], raw temperature [C], pressure [hPa], raw relative humidity [%], gas [Ohm], IAQ, IAQ accuracy, temperature [C], relative humidity [%], Static IAQ, CO2 equivalent, breath VOC equivalent";
     MYLOG("BME", "%s", output.c_str());
 
     unsigned long time_trigger = millis();
