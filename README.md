@@ -15,8 +15,8 @@ A public dataset from [Roboflow Universe](https://universe.roboflow.com/) was lo
 ## Sample Serial Output
 ```
 [APP] Timer wakeup
-[BME] RH= 52.00 T= 24.40
-[BME] P= 101270 R= 9150
+[BME] Timestamp [ms], raw temperature [C], pressure [hPa], raw relative humidity [%], gas [Ohm], IAQ, IAQ accuracy, temperature [C], relative humidity [%], Static IAQ, CO2 equivalent, breath VOC equivalent
+[BME] 146639, 25.23, 100913.00, 53.70, 2949.00, 25.00, 0, 25.23, 53.70, 25.00, 500.00, 0.50
 [AI] Time consuming: 710
 [AI] Number of chickens: 1
 [AI] result:detected
