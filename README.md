@@ -12,6 +12,8 @@ Here is the list of hardware used, substitutions can be made based on use-case
 ## Vision AI Dataset
 A public dataset from [Roboflow Universe](https://universe.roboflow.com/) was loaded onto the Grove Vision AI module via the instructions provided [HERE](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-Grove-Vision-AI/#jump1)
 
+The dataset: [Chicken Image Dataset](https://universe.roboflow.com/z-camp-cool-drink/chicken-unfrm/dataset/1)
+
 ## Sample Serial Output
 ```
 [APP] Setup IoT-Anywhere Coopster
