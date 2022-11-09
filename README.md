@@ -14,9 +14,32 @@ A public dataset from [Roboflow Universe](https://universe.roboflow.com/) was lo
 
 ## Sample Serial Output
 ```
+[APP] Setup IoT-Anywhere Coopster
+[APP] Initialize Grove AI
+[AI] AI Detection Setup Begin
+[AI] Version: 256
+[AI] ID: 256
+[AI] Algo: 0
+[AI] Model: 16
+[AI] Confidence: 50
+[APP] Result success
+[APP] Initialize BME680
+[BME] BSEC library version 1.4.8.0
+[APP] Result success
+[APP] Successfully joined network
 [APP] Timer wakeup
-[BME] Timestamp [ms], raw temperature [C], pressure [hPa], raw relative humidity [%], gas [Ohm], IAQ, IAQ accuracy, temperature [C], relative humidity [%], Static IAQ, CO2 equivalent, breath VOC equivalent
-[BME] 146639, 25.23, 100913.00, 53.70, 2949.00, 25.00, 0, 25.23, 53.70, 25.00, 500.00, 0.50
+[BME] Timestamp [ms] : 907005
+[BME] Raw Temp  [C]  : 29.55
+[BME] Pressure  [hPa]: 103145.00
+[BME] Raw RH    [%]  : 28.72
+[BME] Gas       [Ohm]: 5161.00
+[BME] IAQ            : 25.00
+[BME] IAQ Accuracy   : 0
+[BME] Temp      [C]  : 29.55
+[BME] RH        [%]  : 28.72
+[BME] Statuc IAQ     : 25.00
+[BME] CO2            : 500.00
+[BME] Breath VOC     : 0.50
 [AI] Time consuming: 710
 [AI] Number of chickens: 1
 [AI] result:detected
