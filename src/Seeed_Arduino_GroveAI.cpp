@@ -25,6 +25,7 @@
  * THE SOFTWARE.
  */
 
+#include "main.h"
 #include "Seeed_Arduino_GroveAI.h"
 
 GroveAI::GroveAI(TwoWire &wire, uint8_t address)
@@ -52,6 +53,7 @@ bool GroveAI::begin(ALGO_INDEX_T algo, MODEL_INDEX_T model, uint8_t confidence)
 
     if (GROVE_AI_CAMERA_ID != _system.id)
     {
+        MYLOG("AI", "Error: Camera ID Mismatch. Expecting %04X, Found %04X", GROVE_AI_CAMERA_ID, _system.id);
         return false;
     }
 
@@ -66,18 +68,22 @@ bool GroveAI::begin(ALGO_INDEX_T algo, MODEL_INDEX_T model, uint8_t confidence)
     {
         if (algo != set_algo(algo))
         {
+            MYLOG("AI", "Error: Failed to set algo.");
             return false;
         }
         if (model != set_model(model))
         {
+            MYLOG("AI", "Error: Failed to set model.");
             return false;
         }
         if (confidence != set_confidence(confidence))
         {
+            MYLOG("AI", "Error: Failed to set confidence.");
             return false;
         }
         if (!config_save())
         {
+            MYLOG("AI", "Error: Failed to save config.");
             return false;
         }
         reset();

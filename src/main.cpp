@@ -74,6 +74,11 @@ void setup_app(void)
 	}
 	digitalWrite(LED_GREEN, LOW);
 
+	//Enable the boost, and set high, to use 5V for Grove Vision AI
+	pinMode(WB_IO5, OUTPUT);
+	digitalWrite(WB_IO5, 1);
+	delay(10);
+
 	MYLOG("APP", "Setup IoT-Anywhere Coopster");
 
 	// Enable BLE

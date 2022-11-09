@@ -42,27 +42,22 @@ bool init_bme680(void)
 
 void bme680_get()
 {
-    String output;
-    output = "Timestamp [ms], raw temperature [C], pressure [hPa], raw relative humidity [%], gas [Ohm], IAQ, IAQ accuracy, temperature [C], relative humidity [%], Static IAQ, CO2 equivalent, breath VOC equivalent";
-    MYLOG("BME", "%s", output.c_str());
 
     unsigned long time_trigger = millis();
     if (iaqSensor.run())
     { // If new data is available
-        output = String(time_trigger);
-        output += ", " + String(iaqSensor.rawTemperature);
-        output += ", " + String(iaqSensor.pressure);
-        output += ", " + String(iaqSensor.rawHumidity);
-        output += ", " + String(iaqSensor.gasResistance);
-        output += ", " + String(iaqSensor.iaq);
-        output += ", " + String(iaqSensor.iaqAccuracy);
-        output += ", " + String(iaqSensor.temperature);
-        output += ", " + String(iaqSensor.humidity);
-        output += ", " + String(iaqSensor.staticIaq);
-        output += ", " + String(iaqSensor.co2Equivalent);
-        output += ", " + String(iaqSensor.breathVocEquivalent);
-        MYLOG("BME", "%s", output.c_str());
-
+        MYLOG("BME", "Timestamp [ms] : %lu", time_trigger);
+        MYLOG("BME", "Raw Temp  [C]  : %.2f", iaqSensor.rawTemperature);
+        MYLOG("BME", "Pressure  [hPa]: %.2f", iaqSensor.pressure);
+        MYLOG("BME", "Raw RH    [%%]  : %.2f", iaqSensor.rawHumidity);        
+        MYLOG("BME", "Gas       [Ohm]: %.2f", iaqSensor.gasResistance);
+        MYLOG("BME", "IAQ            : %.2f", iaqSensor.iaq);        
+        MYLOG("BME", "IAQ Accuracy   : %d", iaqSensor.iaqAccuracy);
+        MYLOG("BME", "Temp      [C]  : %.2f", iaqSensor.temperature);        
+        MYLOG("BME", "RH        [%%]  : %.2f", iaqSensor.humidity);
+        MYLOG("BME", "Statuc IAQ     : %.2f", iaqSensor.staticIaq);        
+        MYLOG("BME", "CO2            : %.2f", iaqSensor.co2Equivalent);
+        MYLOG("BME", "Breath VOC     : %.2f", iaqSensor.breathVocEquivalent);
         // Fill the uplink packet
         int16_t temp_int = (int16_t)(iaqSensor.temperature * 10.0);
         uint16_t humid_int = (uint16_t)(iaqSensor.humidity * 2);
